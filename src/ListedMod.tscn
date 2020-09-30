@@ -1,0 +1,20 @@
+[gd_scene format=2]
+
+[node name="ListedMod" type="PanelContainer"]
+margin_right = 256.0
+margin_bottom = 64.0
+rect_min_size = Vector2( 256, 64 )
+size_flags_horizontal = 3
+
+[node name="Name" type="Label" parent="."]
+margin_left = 7.0
+margin_top = 25.0
+margin_right = 249.0
+margin_bottom = 39.0
+size_flags_horizontal = 3
+size_flags_vertical = 6
+text = "Nome do mod"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
