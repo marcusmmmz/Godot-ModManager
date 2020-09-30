@@ -1,5 +1,4 @@
 extends Node
-#Esse aq é um singleton
 
 func _ready():
 	load_mods()
