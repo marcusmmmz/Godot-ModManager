@@ -1,20 +1,56 @@
 [gd_scene format=2]
 
 [node name="ListedMod" type="PanelContainer"]
-margin_right = 256.0
-margin_bottom = 64.0
+anchor_right = 0.25
+anchor_bottom = 0.133
+margin_bottom = 0.199997
 rect_min_size = Vector2( 256, 64 )
 size_flags_horizontal = 3
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
-[node name="Name" type="Label" parent="."]
+[node name="VBox" type="VBoxContainer" parent="."]
 margin_left = 7.0
-margin_top = 25.0
+margin_top = 7.0
 margin_right = 249.0
-margin_bottom = 39.0
+margin_bottom = 73.0
+custom_constants/separation = 12
+
+[node name="Name" type="Label" parent="VBox"]
+margin_right = 242.0
+margin_bottom = 14.0
 size_flags_horizontal = 3
 size_flags_vertical = 6
-text = "Nome do mod"
+text = "Mod's name"
 align = 1
+autowrap = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Description" type="Label" parent="VBox"]
+margin_top = 26.0
+margin_right = 242.0
+margin_bottom = 40.0
+size_flags_horizontal = 3
+size_flags_vertical = 6
+text = "Description"
+align = 1
+autowrap = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Author" type="Label" parent="VBox"]
+margin_top = 52.0
+margin_right = 242.0
+margin_bottom = 66.0
+size_flags_horizontal = 3
+size_flags_vertical = 6
+text = "by Author"
+align = 1
+autowrap = true
 __meta__ = {
 "_edit_use_anchors_": false
 }

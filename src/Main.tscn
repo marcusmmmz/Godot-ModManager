@@ -6,10 +6,13 @@ script/source = "extends VBoxContainer
 var ListedMod = preload(\"res://src/ListedMod.tscn\")
 
 func _ready():
-	for mod in ModManager.get_children():
-		
+	for mod in ModManager.mods:
 		var ModNode = ListedMod.instance()
-		ModNode.get_node(\"Name\").text = mod.mod_info.name
+		
+		ModNode.get_node(\"VBox/Name\").text = mod.name
+		ModNode.get_node(\"VBox/Description\").text = mod.description
+		ModNode.get_node(\"VBox/Author\").text = mod.author
+		
 		add_child(ModNode)
 "
 
