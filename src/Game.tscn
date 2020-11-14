@@ -1,0 +1,40 @@
+[gd_scene load_steps=2 format=2]
+
+[sub_resource type="GDScript" id=1]
+script/source = "extends VBoxContainer
+
+var ListedMod = preload(\"res://src/ListedMod.tscn\")
+
+func _ready():
+	for mod in ModManager.mods_info:
+		var ModNode = ListedMod.instance()
+		
+		for i in [\"Name\", \"Description\", \"Author\", \"Version\"]:
+			ModNode.get_node(\"VBox/\" + i).text = mod[i.to_lower()]
+		
+		add_child(ModNode)
+"
+
+[node name="Game" type="Node"]
+
+[node name="Main" type="Control" parent="."]
+margin_right = 1024.0
+margin_bottom = 600.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ModList" type="ScrollContainer" parent="Main"]
+anchor_left = 0.75
+anchor_right = 1.0
+anchor_bottom = 1.0
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Main/ModList"]
+margin_right = 256.0
+margin_bottom = 600.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+script = SubResource( 1 )

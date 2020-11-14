@@ -1,0 +1,7 @@
+{
+    "name":"Test mod",
+    "author":"marcusmmmz",
+    "description":"This mod does cool things, like examples for github",
+    "main":"index.gd",
+    "version":"1.0.0"
+}

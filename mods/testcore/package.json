@@ -1,0 +1,7 @@
+{
+    "name":"testcore",
+    "author":"marcusmmmz",
+    "description":"mod to depend on... i.e. dependency testing",
+    "main":"index.gd",
+    "version":"1.0.0"
+}
