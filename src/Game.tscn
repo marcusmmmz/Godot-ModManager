@@ -6,7 +6,7 @@ script/source = "extends VBoxContainer
 var ListedMod = preload(\"res://src/ListedMod.tscn\")
 
 func _ready():
-	for mod in ModManager.mods_info:
+	for mod in ModManager.mods_info.values():
 		var ModNode = ListedMod.instance()
 		
 		for i in [\"Name\", \"Description\", \"Author\", \"Version\"]:

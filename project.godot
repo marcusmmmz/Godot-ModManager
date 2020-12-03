@@ -8,9 +8,14 @@
 
 config_version=4
 
-_global_script_classes=[  ]
+_global_script_classes=[ {
+"base": "Resource",
+"class": "ModInfo",
+"language": "GDScript",
+"path": "res://src/ModInfo.gd"
+} ]
 _global_script_class_icons={
-
+"ModInfo": ""
 }
 
 [application]
@@ -25,4 +30,5 @@ ModManager="*res://src/ModManager.gd"
 
 [rendering]
 
+quality/driver/driver_name="GLES2"
 environment/default_environment="res://default_env.tres"
